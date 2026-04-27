@@ -16,6 +16,15 @@ Register this repository as a Codex marketplace:
 codex plugin marketplace add forsonny/deep-discovery
 ```
 
+If that command fails on Windows with a Git staging-path error, use a local
+checkout:
+
+```powershell
+git clone https://github.com/forsonny/deep-discovery.git
+cd deep-discovery
+codex plugin marketplace add .
+```
+
 Restart Codex, open Plugins, switch the filter to show third-party plugins, and
 install `deep-discovery` from `Deep Discovery Plugins`.
 

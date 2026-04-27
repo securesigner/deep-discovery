@@ -6,3 +6,4 @@
 - Added the Codex repo marketplace manifest.
 - Added the `deep-discovery` skill and domain reference patterns.
 - Added Codex install, usage, validation, and license documentation.
+- Documented the verified Windows clone-and-register fallback.

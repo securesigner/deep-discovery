@@ -8,6 +8,7 @@ Verified in this repository:
 - `codex plugin marketplace upgrade <marketplace-name>` exists.
 - `codex plugin marketplace remove <marketplace-name>` exists.
 - Codex accepts this repository as a local marketplace source.
+- Git can clone `https://github.com/forsonny/deep-discovery.git`.
 - Codex records marketplace registrations in `CODEX_HOME/config.toml`.
 - Codex requires `.agents/plugins/marketplace.json` for repo marketplace discovery.
 - Codex requires `.codex-plugin/plugin.json` for plugin metadata.
@@ -17,6 +18,12 @@ Not verified in this session:
 
 - the final install click path inside the Codex Plugins UI
 
+Known Windows CLI caveat:
+
+- In this Windows environment, `codex plugin marketplace add forsonny/deep-discovery`
+  failed during Codex's Git staging clone. `git clone` followed by
+  `codex plugin marketplace add .` succeeded.
+
 ## Install
 
 Register the marketplace from GitHub:
@@ -25,7 +32,16 @@ Register the marketplace from GitHub:
 codex plugin marketplace add forsonny/deep-discovery
 ```
 
-For a local checkout, run this from the repository root:
+On Windows, if the remote marketplace command fails with a Git staging-path
+error, clone the repository and register the local checkout:
+
+```powershell
+git clone https://github.com/forsonny/deep-discovery.git
+cd deep-discovery
+codex plugin marketplace add .
+```
+
+For an existing local checkout, run this from the repository root:
 
 ```powershell
 codex plugin marketplace add .
