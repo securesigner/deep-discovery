@@ -1,0 +1,39 @@
+{
+  "name": "deep-discovery",
+  "version": "1.0.0",
+  "description": "100-question deep discovery process: a structured self-interrogation framework for thoroughly exploring a topic, architecture, strategy, or problem space before committing to a design.",
+  "author": {
+    "name": "forsonny",
+    "url": "https://github.com/forsonny"
+  },
+  "homepage": "https://github.com/forsonny/deep-discovery",
+  "repository": "https://github.com/forsonny/deep-discovery.git",
+  "license": "MIT",
+  "keywords": [
+    "discovery",
+    "brainstorming",
+    "architecture",
+    "strategy",
+    "planning",
+    "review",
+    "skills"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Deep Discovery",
+    "shortDescription": "Run a rigorous 100-question discovery process in Codex.",
+    "longDescription": "Deep Discovery packages a Codex skill for stress-testing ideas, architectures, strategies, and plans through 100 sequential self-interrogation questions, then summarizing critical issues, strengths, recommended changes, and an honest bottom line.",
+    "developerName": "forsonny",
+    "category": "Productivity",
+    "capabilities": [
+      "Skills"
+    ],
+    "websiteURL": "https://github.com/forsonny/deep-discovery",
+    "defaultPrompt": [
+      "Run deep discovery on this architecture.",
+      "Stress test this plan with 100 questions.",
+      "Interrogate this strategy before I commit."
+    ],
+    "brandColor": "#B91C1C"
+  }
+}

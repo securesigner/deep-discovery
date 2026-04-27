@@ -1,0 +1,20 @@
+{
+  "name": "deep-discovery-marketplace",
+  "interface": {
+    "displayName": "Deep Discovery Plugins"
+  },
+  "plugins": [
+    {
+      "name": "deep-discovery",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
