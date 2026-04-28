@@ -1,0 +1,21 @@
+{
+  "name": "deep-discovery",
+  "version": "1.1.0",
+  "description": "100-question deep discovery process: a structured self-interrogation framework for thoroughly exploring a topic, architecture, strategy, or problem space before committing to a design.",
+  "author": {
+    "name": "forsonny",
+    "url": "https://github.com/forsonny"
+  },
+  "homepage": "https://github.com/forsonny/deep-discovery",
+  "repository": "https://github.com/forsonny/deep-discovery.git",
+  "license": "MIT",
+  "keywords": [
+    "discovery",
+    "brainstorming",
+    "architecture",
+    "strategy",
+    "planning",
+    "review",
+    "skills"
+  ]
+}
