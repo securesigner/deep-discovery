@@ -1,13 +1,13 @@
 ---
 name: deep-discovery
-description: Use when the user asks for deep discovery, 100-question brainstorming, idea interrogation, architecture stress testing, strategy vetting, weakness finding, hole-poking, exhaustive exploration, planning or auditing Codex plugins or skills, or pre-commitment review of a design, plan, strategy, architecture, product, business idea, trading system, or problem space.
+description: Use when the user asks for deep discovery, 100-question brainstorming, idea interrogation, architecture stress testing, strategy vetting, weakness finding, hole-poking, exhaustive exploration, planning or auditing Claude Code plugins, skills, subagents, or slash commands, or pre-commitment review of a design, plan, strategy, architecture, product, business idea, trading system, or problem space.
 ---
 
 # Deep Discovery
 
 A structured self-interrogation framework that exhaustively explores a topic through
 100 sequential questions, each building on the previous answer. Designed to be
-used in Codex as a skill for rigorous, sequential exploration before committing
+used as a Claude Code skill for rigorous, sequential exploration before committing
 to a design or decision.
 
 ## Preflight
@@ -20,7 +20,7 @@ to a design or decision.
    - **Exploration:** the user is starting from scratch.
    - **Comparison:** the user is choosing between two or three options.
 3. Choose the closest domain pattern: software architecture, code review,
-   Codex plugin/skill creation, business/product, trading/financial, or general.
+   Claude Code plugin/skill creation, business/product, trading/financial, or general.
    Use `references/question-patterns.md` as the index, then read only the relevant
    reference file when domain-specific prompts would improve the run.
 4. After enough context is available, run the process without further human
@@ -58,11 +58,11 @@ progress through phases:
 
 ## Running the Process
 
-Run the process in the current Codex conversation by default. If the user
-explicitly asks to delegate the work to a sub-agent, use Codex's available
-sub-agent mechanism and summarize the returned findings. Do not assume a
-delegation tool is available, and do not refer to legacy tool names or custom
-agent manifests from other harnesses.
+Run the process in the current conversation by default. If the user explicitly
+asks to delegate the work, use the Agent tool to spawn a subagent (general-purpose
+or one defined in `.claude/agents/`) and summarize the returned findings. Do not
+delegate without an explicit user request, and do not refer to legacy tool names
+or custom agent manifests from other harnesses.
 
 ### Prompt Template
 
@@ -74,7 +74,7 @@ Context: [relevant background - what's already been decided, constraints, goals]
 Focus: [what specifically to evaluate - architecture? strategy? feasibility?]
 Starting point: [any existing design or proposal to interrogate, or "from scratch"]
 Mode: [evaluation | exploration | comparison]
-Domain pattern: [software architecture | code review | codex plugin/skill creation | business/product | trading/financial | general]
+Domain pattern: [software architecture | code review | claude code plugin/skill creation | business/product | trading/financial | general]
 
 Do a rigorous 100-question self-brainstorm. Each question builds on the last.
 Start with "What is the goal, and how do we get there?" and dig progressively
@@ -121,9 +121,9 @@ that emerged from the questioning process.
 
 When choosing between 2-3 options, run a separate 100-question process for each,
 then compare the findings. If the user explicitly asks for delegated or parallel
-work and Codex exposes a suitable mechanism, these runs may be delegated.
-Synthesize a side-by-side comparison of their top issues, strengths, and revised
-proposals to present a clear recommendation to the user.
+work, these runs may be delegated to subagents via the Agent tool. Synthesize a
+side-by-side comparison of their top issues, strengths, and revised proposals to
+present a clear recommendation to the user.
 
 ## Integration with Other Skills
 
@@ -139,7 +139,7 @@ proposals to present a clear recommendation to the user.
 - **`references/question-patterns.md`** - Index of available domain pattern files.
 - **`references/software-architecture.md`** - Architecture and system design patterns.
 - **`references/code-review.md`** - Patch, branch, and implementation review patterns.
-- **`references/codex-plugin-creation.md`** - Codex plugin and skill planning/audit patterns.
+- **`references/claude-plugin-creation.md`** - Claude Code plugin, skill, subagent, and slash command planning/audit patterns.
 - **`references/business-product.md`** - Business strategy and product patterns.
 - **`references/trading-financial.md`** - Trading system and financial strategy patterns.
 - **`references/general-pattern.md`** - Universal fallback pattern and discovery tips.

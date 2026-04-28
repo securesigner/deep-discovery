@@ -17,12 +17,12 @@ Read only the closest matching pattern file:
 |--------|------|----------|
 | Software Architecture | `references/software-architecture.md` | Designing or auditing systems, APIs, services, data flows, deployments, or technical architecture. |
 | Code Review | `references/code-review.md` | Reviewing a patch, branch, pull request, implementation, or proposed diff before accepting it. |
-| Codex Plugin/Skill Creation | `references/codex-plugin-creation.md` | Planning, auditing, repairing, or packaging Codex plugins, skills, interface metadata, references, manifests, cache installs, or marketplace entries. |
+| Claude Code Plugin/Skill Creation | `references/claude-plugin-creation.md` | Planning, auditing, repairing, or packaging Claude Code plugins, skills, subagents, slash commands, hooks, MCP servers, references, manifests, cache installs, or marketplace entries. |
 | Trading / Financial | `references/trading-financial.md` | Evaluating trading systems, financial strategies, market edges, execution risk, or backtests. |
 | Business / Product | `references/business-product.md` | Evaluating products, go-to-market plans, business models, market strategy, or startup ideas. |
 | General | `references/general-pattern.md` | No domain-specific pattern fits cleanly, or the topic spans multiple domains. |
 
 If two files fit, choose the one that matches the user's deliverable. For
-example, use Code Review for a patch to a plugin, but use Codex Plugin/Skill
+example, use Code Review for a patch to a plugin, but use Claude Code Plugin/Skill
 Creation for the plugin's concept, structure, triggering behavior, or
 installation and validation workflow.

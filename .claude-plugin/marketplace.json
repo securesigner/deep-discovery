@@ -1,0 +1,29 @@
+{
+  "name": "deep-discovery",
+  "owner": {
+    "name": "forsonny",
+    "url": "https://github.com/forsonny"
+  },
+  "description": "Deep Discovery plugins for Claude Code.",
+  "version": "1.1.0",
+  "plugins": [
+    {
+      "name": "deep-discovery",
+      "source": "./",
+      "description": "Run a rigorous 100-question discovery process in Claude Code.",
+      "version": "1.1.0",
+      "homepage": "https://github.com/forsonny/deep-discovery",
+      "repository": "https://github.com/forsonny/deep-discovery.git",
+      "license": "MIT",
+      "category": "productivity",
+      "keywords": [
+        "discovery",
+        "brainstorming",
+        "architecture",
+        "strategy",
+        "planning",
+        "review"
+      ]
+    }
+  ]
+}
